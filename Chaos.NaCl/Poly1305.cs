@@ -17,7 +17,9 @@ namespace Chaos.NaCl
         }
 
         [Obsolete("Needs more testing")]
+#pragma warning disable CS0809 // Obsolete member overrides non-obsolete member
         public override byte[] Sign(byte[] message, byte[] key)
+#pragma warning restore CS0809 // Obsolete member overrides non-obsolete member
         {
             if (message == null)
                 throw new ArgumentNullException("message");
@@ -34,7 +36,9 @@ namespace Chaos.NaCl
         }
 
         [Obsolete("Needs more testing")]
+#pragma warning disable CS0809 // Obsolete member overrides non-obsolete member
         public override void Sign(ArraySegment<byte> signature, ArraySegment<byte> message, ArraySegment<byte> key)
+#pragma warning restore CS0809 // Obsolete member overrides non-obsolete member
         {
             if (signature.Array == null)
                 throw new ArgumentNullException("signature.Array");
@@ -53,7 +57,9 @@ namespace Chaos.NaCl
         }
 
         [Obsolete("Needs more testing")]
+#pragma warning disable CS0809 // Obsolete member overrides non-obsolete member
         public override bool Verify(byte[] signature, byte[] message, byte[] key)
+#pragma warning restore CS0809 // Obsolete member overrides non-obsolete member
         {
             if (signature == null)
                 throw new ArgumentNullException("signature");
@@ -74,7 +80,9 @@ namespace Chaos.NaCl
         }
 
         [Obsolete("Needs more testing")]
+#pragma warning disable CS0809 // Obsolete member overrides non-obsolete member
         public override bool Verify(ArraySegment<byte> signature, ArraySegment<byte> message, ArraySegment<byte> key)
+#pragma warning restore CS0809 // Obsolete member overrides non-obsolete member
         {
             if (signature.Array == null)
                 throw new ArgumentNullException("signature.Array");
